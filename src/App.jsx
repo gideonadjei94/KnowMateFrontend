@@ -1,8 +1,11 @@
+import { Route, Routes } from "react-router";
+import LandingPage from "./pages/LandingPage";
+
 function App() {
   return (
-    <div className="flex items-center justify-center h-screen font-semibold text-2xl ">
-      Hi EveryOne
-    </div>
+    <Routes>
+      <Route path="/" element={<LandingPage />} />
+    </Routes>
   );
 }
 

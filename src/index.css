@@ -1,1 +1,10 @@
 @import "tailwindcss";
+
+* {
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+  transition: 0.2s;
+}
+html {
+  scroll-behavior: smooth;
+}
