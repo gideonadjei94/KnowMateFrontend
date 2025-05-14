@@ -1,9 +1,10 @@
 import { Plus } from "lucide-react";
 import React from "react";
+import FeaturesCarousel from "../components/FeaturesCarousel";
 
 export default function LandingPage() {
   return (
-    <div className="w-dvw h-screen relative">
+    <div className="w-dvw relative min-h-screen flex flex-col bg-gray-100 pb-10">
       {/* Navbar */}
       <nav className="fixed top-0 left-0 w-full bg-white  z-50 flex items-center justify-between px-6 py-4">
         <div className="text-2xl font-bold text-[#4255ff]">KnowMate</div>
@@ -19,7 +20,7 @@ export default function LandingPage() {
       </nav>
 
       {/* Main */}
-      <div className="w-full bg-gray-100 h-full flex justify">
+      <div className="w-full  h-full flex flex-col">
         <div className="flex flex-col gap-y-3 w-full text-center items-center pt-32">
           <h1 className="text-[38px] font-bold">How do you want to study?</h1>
           <p className="text-lg ">
@@ -37,6 +38,8 @@ export default function LandingPage() {
           </button>
         </div>
       </div>
+
+      <FeaturesCarousel />
     </div>
   );
 }

@@ -8,3 +8,7 @@
 html {
   scroll-behavior: smooth;
 }
+
+.slick-slide {
+  padding: 0 22px;
+}
