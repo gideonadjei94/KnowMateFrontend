@@ -70,6 +70,25 @@ function FeaturesCarousel() {
             }`}
           >
             <h2 className="text-xl font-semibold">{feature.title}</h2>
+            <div className="w-68 h-72 mt-14 ml-[22px] rounded-tl-2xl rounded-br-2xl">
+              <img
+                src={
+                  index === 0
+                    ? "https://images.prismic.io/quizlet-web/ZpFubx5LeNNTxHxg_4Learn%402x.png?auto=format,compress"
+                    : index === 1
+                    ? "https://images.prismic.io/quizlet-web/ZpFuOB5LeNNTxHxU_1SG%402x.png?auto=format,compress"
+                    : index === 2
+                    ? "	https://images.prismic.io/quizlet-web/ZpFuUR5LeNNTxHxc_2Flashcards%402x.png?auto=format,compress"
+                    : index === 3
+                    ? "https://images.prismic.io/quizlet-web/ZpFuYB5LeNNTxHxd_3PracticeTests%402x.png?auto=format,compress"
+                    : index === 4
+                    ? "https://plus.unsplash.com/premium_photo-1661685751617-d51f9025f164?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjl8fHNvbHV0aW9uc3xlbnwwfHwwfHx8MA%3D%3D"
+                    : ""
+                }
+                alt="card image"
+                className="object-cover w-full h-full rounded-tl-2xl rounded-br-2xl"
+              />
+            </div>
           </div>
         ))}
       </Slider>
