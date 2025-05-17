@@ -1,21 +1,43 @@
-import { Plus } from "lucide-react";
-import React from "react";
+import { ChevronDown, Plus } from "lucide-react";
 import FeaturesCarousel from "../components/FeaturesCarousel";
 import Footer from "../components/Footer";
+import { useEffect, useState } from "react";
+import LoginModal from "../components/LoginModal";
+import { useNavigate } from "react-router-dom";
 
 export default function LandingPage() {
+  const navigate = useNavigate();
+  const [showLoginModal, setShowLoginModal] = useState(false);
+
+  useEffect(() => {
+    document.body.style.overflow = showLoginModal ? "hidden" : "auto";
+  }, [showLoginModal]);
+
+  const signUp = () => {
+    navigate("/signup");
+  };
+
   return (
     <>
       <div className="w-dvw relative min-h-screen flex flex-col bg-gray-100 pb-10 ">
         {/* Navbar */}
         <nav className="fixed top-0 left-0 w-full bg-white  z-50 flex items-center justify-between px-10 py-4">
-          <div className="text-2xl font-bold text-[#4255ff]">KnowMate</div>
+          <div className="flex items-center gap-8">
+            <p className="text-2xl font-bold text-[#4255ff]">KnowMate</p>
+            <div className="flex items-center gap-2">
+              <p className="text-sm font-medium">Study Tools</p>
+              <ChevronDown className="size-4" />
+            </div>
+          </div>
           <div className="flex gap-x-8">
             <button className="text-sm flex items-center text-[#4255ff] gap-x-1 font-medium hover:cursor-pointer">
               <Plus className="size-4" />
               Create
             </button>
-            <button className="px-3 py-2 rounded-full bg-[#4255ff] text-white font-medium text-sm hover:cursor-pointer">
+            <button
+              className="py-2 px-3 rounded-full bg-[#4255ff] text-white font-medium text-sm hover:cursor-pointer"
+              onClick={() => setShowLoginModal(true)}
+            >
               Log in
             </button>
           </div>
@@ -31,7 +53,10 @@ export default function LandingPage() {
               <br /> and study activities.
             </p>
 
-            <button className="px-4 py-2.5 rounded-3xl bg-[#4255ff] text-white w-auto font-medium text-[14px] hover:cursor-pointer mt-2">
+            <button
+              className="p-4 text-[14px] rounded-full bg-[#4255ff] text-white w-auto font-medium  hover:cursor-pointer mt-2"
+              onClick={signUp}
+            >
               Sign up for free
             </button>
 
@@ -62,7 +87,10 @@ export default function LandingPage() {
               Turn your slides, videos, and notes into flashcard sets, practice
               tests, and study guides.
             </p>
-            <button className="p-5 bg-[#4255ff] rounded-full text-white font-medium w-[22%] hover:cursor-pointer">
+            <button
+              className="p-5 bg-[#4255ff] rounded-full text-white font-medium w-[22%] hover:cursor-pointer"
+              onClick={signUp}
+            >
               Try it out
             </button>
           </div>
@@ -78,7 +106,10 @@ export default function LandingPage() {
               sessions in Learn. 98% of students say Quizlet has improved their
               understanding.
             </p>
-            <button className="p-5 bg-[#4255ff] rounded-full text-white font-medium w-[26%] hover:cursor-pointer">
+            <button
+              className="p-5 bg-[#4255ff] rounded-full text-white font-medium w-[26%] hover:cursor-pointer"
+              onClick={signUp}
+            >
               Get Started
             </button>
           </div>
@@ -92,6 +123,9 @@ export default function LandingPage() {
           />
         </div>
       </div>
+      {showLoginModal && (
+        <LoginModal onClose={() => setShowLoginModal(!showLoginModal)} />
+      )}
       <Footer />
     </>
   );

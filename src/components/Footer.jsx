@@ -4,7 +4,7 @@ export default function Footer() {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full border-b-2 pb-20 border-gray-300">
         <div className="flex flex-col gap-4">
           <h3 className="text-xl font-semibold">About KnowMate</h3>
-          <p className="text-sm leading-loose">
+          <p className="leading-loose">
             An interactive quiz platform designed to make learning engaging and
             effective. Enjoy category-based quizzes, real-time feedback, and
             track your progress as you grow your knowledge.
@@ -13,7 +13,7 @@ export default function Footer() {
 
         <div className="flex flex-col gap-4">
           <h3 className="text-xl font-semibold">Quick Links</h3>
-          <ul className="space-y-4 text-sm">
+          <ul className="space-y-4 ">
             <li>
               <a href="#" className="hover:cursor-pointer">
                 Home
@@ -44,11 +44,11 @@ export default function Footer() {
 
         <div className="flex flex-col gap-4">
           <h3 className="text-xl font-semibold">Contact & Social</h3>
-          <p className="text-sm ">Email: support@knowmate.app</p>
-          <p className="text-sm ">Phone: +233 XXX XXX XXX</p>
+          <p className=" ">Email: support@knowmate.app</p>
+          <p className=" ">Phone: +233 XXX XXX XXX</p>
           <div>
-            <p className="text-sm  mb-2">Follow Us</p>
-            <ul className="flex gap-4 text-sm ">
+            <p className=" mb-2">Follow Us</p>
+            <ul className="flex gap-4 ">
               <li>
                 <a href="#" className="hover:cursor-pointer">
                   Twitter
