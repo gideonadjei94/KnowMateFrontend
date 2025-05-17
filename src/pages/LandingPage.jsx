@@ -1,11 +1,12 @@
 import { Plus } from "lucide-react";
 import React from "react";
 import FeaturesCarousel from "../components/FeaturesCarousel";
+import Footer from "../components/Footer";
 
 export default function LandingPage() {
   return (
     <>
-      <div className="w-dvw relative min-h-screen flex flex-col bg-gray-100 pb-10">
+      <div className="w-dvw relative min-h-screen flex flex-col bg-gray-100 pb-10 ">
         {/* Navbar */}
         <nav className="fixed top-0 left-0 w-full bg-white  z-50 flex items-center justify-between px-10 py-4">
           <div className="text-2xl font-bold text-[#4255ff]">KnowMate</div>
@@ -91,6 +92,7 @@ export default function LandingPage() {
           />
         </div>
       </div>
+      <Footer />
     </>
   );
 }
