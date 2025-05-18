@@ -3,12 +3,14 @@ import LandingPage from "./pages/LandingPage";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import SignUp from "./pages/SignUp";
+import Dashboard from "./pages/Dashboard/_layout";
 
 function App() {
   const location = useLocation();
   const routeTitles = {
     "/": "KnowMate",
     "/signup": "Sign Up | KnowMate",
+    "/dashboard": "Dashboard",
   };
 
   useEffect(() => {
@@ -19,6 +21,7 @@ function App() {
     <Routes>
       <Route path="/" element={<LandingPage />} />
       <Route path="/signup" element={<SignUp />} />
+      <Route path="/dashboard" element={<Dashboard />}></Route>
     </Routes>
   );
 }
