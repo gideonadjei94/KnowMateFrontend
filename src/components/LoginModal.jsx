@@ -5,6 +5,10 @@ import { useNavigate } from "react-router-dom";
 export default function LoginModal({ onClose }) {
   const navigate = useNavigate();
 
+  const login = () => {
+    navigate("/dashboard");
+  };
+
   return (
     <div className="fixed inset-0 backdrop-blur-md bg-opacity-40 flex justify-center items-center z-[1000]">
       <div className="bg-white w-[90%] max-w-md rounded-lg shadow-lg py-6 px-8 relative">
@@ -54,7 +58,7 @@ export default function LoginModal({ onClose }) {
             </p>
 
             <button
-              type="submit"
+              onClick={login}
               className="py-3 rounded-lg text-white text-sm bg-indigo-600 w-full mt-4 hover:cursor-pointer"
             >
               Log In

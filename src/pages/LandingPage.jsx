@@ -1,9 +1,11 @@
-import { ChevronDown, Plus } from "lucide-react";
+import { ChevronDown, Menu, Plus } from "lucide-react";
 import FeaturesCarousel from "../components/FeaturesCarousel";
 import Footer from "../components/Footer";
 import { useEffect, useState } from "react";
 import LoginModal from "../components/LoginModal";
 import { useNavigate } from "react-router-dom";
+import StudyToolsDropDown from "../components/StudyToolsDropDown";
+import MenuSheet from "../components/MenuSheet";
 
 export default function LandingPage() {
   const navigate = useNavigate();
@@ -24,13 +26,14 @@ export default function LandingPage() {
         <nav className="fixed top-0 left-0 w-full bg-white  z-50 flex items-center justify-between px-10 py-4">
           <div className="flex items-center gap-8">
             <p className="text-2xl font-bold text-[#4255ff]">KnowMate</p>
-            <div className="flex items-center gap-2">
-              <p className="text-sm font-medium">Study Tools</p>
-              <ChevronDown className="size-4" />
-            </div>
+
+            <StudyToolsDropDown />
           </div>
-          <div className="flex gap-x-8">
-            <button className="text-sm flex items-center text-[#4255ff] gap-x-1 font-medium hover:cursor-pointer">
+          <div className="hidden md:flex gap-x-8">
+            <button
+              className="text-sm flex items-center text-[#4255ff] gap-x-1 font-medium hover:cursor-pointer"
+              onClick={() => setShowLoginModal(true)}
+            >
               <Plus className="size-4" />
               Create
             </button>
@@ -41,6 +44,7 @@ export default function LandingPage() {
               Log in
             </button>
           </div>
+          <MenuSheet />
         </nav>
 
         {/* Main */}
@@ -69,8 +73,8 @@ export default function LandingPage() {
         <FeaturesCarousel />
       </div>
 
-      <div className="flex flex-row mx-[12%]  mt-16">
-        <div className="basis-[40%] bg-[#EEAAFF]">
+      <div className="flex flex-row md:mx-[12%]  mt-16">
+        <div className="basis-0 md:basis-[40%] bg-[#EEAAFF]">
           <img
             src="https://images.prismic.io/quizlet-web/ZpWfEh5LeNNTxK_T_study-guides-image.png?auto=format,compress"
             alt="img"
@@ -78,7 +82,7 @@ export default function LandingPage() {
           />
         </div>
 
-        <div className="basis-[55%] py-7 px-4">
+        <div className="basis-[100%] w-full  md:basis-[55%] py-7 px-4">
           <div className="flex flex-col gap-y-10 p-10">
             <p className="text-3xl font-semibold">
               Make class material instantly studiable
@@ -88,7 +92,7 @@ export default function LandingPage() {
               tests, and study guides.
             </p>
             <button
-              className="p-5 bg-[#4255ff] rounded-full text-white font-medium w-[22%] hover:cursor-pointer"
+              className="p-5 bg-[#4255ff] rounded-full text-white font-medium w-[50%] md:w-[22%] hover:cursor-pointer"
               onClick={signUp}
             >
               Try it out
@@ -97,8 +101,8 @@ export default function LandingPage() {
         </div>
       </div>
 
-      <div className="flex flex-row mx-[12%]  mt-16">
-        <div className="basis-[55%] py-7 px-4">
+      <div className="flex flex-row md:mx-[12%]  mt-16">
+        <div className="basis-[100%] md:basis-[55%] py-7 px-4">
           <div className="flex flex-col gap-y-10 p-10">
             <p className="text-3xl font-semibold">Test prep for any subject</p>
             <p className="text-lg">
@@ -107,7 +111,7 @@ export default function LandingPage() {
               understanding.
             </p>
             <button
-              className="p-5 bg-[#4255ff] rounded-full text-white font-medium w-[26%] hover:cursor-pointer"
+              className="p-5 bg-[#4255ff] rounded-full text-white font-medium w-[50%] md:w-[26%] hover:cursor-pointer"
               onClick={signUp}
             >
               Get Started
@@ -115,7 +119,7 @@ export default function LandingPage() {
           </div>
         </div>
 
-        <div className="basis-[40%] bg-[#98E3FF]">
+        <div className="basis-0 md:basis-[40%] bg-[#98E3FF]">
           <img
             src="https://images.prismic.io/quizlet-web/ZpWfEx5LeNNTxK_U_learn-image.png?auto=format,compress"
             alt="img"

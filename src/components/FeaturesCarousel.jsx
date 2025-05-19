@@ -40,11 +40,11 @@ function FeaturesCarousel() {
     responsive: [
       {
         breakpoint: 1024,
-        settings: { slidesToShow: 2, slidesToScroll: 1, dots: true },
+        settings: { slidesToShow: 2, slidesToScroll: 1 },
       },
       {
         breakpoint: 768,
-        settings: { slidesToShow: 1, slidesToScroll: 1, dots: true },
+        settings: { slidesToShow: 1, slidesToScroll: 1 },
       },
     ],
   };
@@ -66,12 +66,12 @@ function FeaturesCarousel() {
   };
 
   return (
-    <div className="w-full px-10 py-12">
+    <div className="w-full px-2 md:px-10 py-12">
       <Slider {...settings}>
         {features.map((feature, index) => (
           <div
             key={index}
-            className={`p-6 rounded-3xl shadow-md text-center mx-10 h-[395px] flex flex-col justify-between ${cardBgs[index]}`}
+            className={`p-6 rounded-3xl shadow-md text-center mx-2 md:mx-10 h-[395px] flex flex-col justify-between ${cardBgs[index]}`}
           >
             <h2 className="text-xl font-semibold">{feature.title}</h2>
             <div className="w-68 h-72 mt-14 ml-[22px] rounded-tl-2xl rounded-br-2xl">

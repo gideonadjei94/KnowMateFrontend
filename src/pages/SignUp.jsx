@@ -18,11 +18,11 @@ export default function SignUp() {
   };
 
   const signUp = () => {
-    navigate("/dashboard");
+    navigate("/dashboard", { replace: true });
   };
   return (
     <div className="w-full flex relative">
-      <div className="basis-[50%] bg-purple-300 h-screen pl-10 pt-10 flex flex-col gap-y-8">
+      <div className=" hidden md:basis-[50%] bg-purple-300 h-screen pl-10 pt-10 md:flex flex-col gap-y-8">
         <div className="text-4xl font-semibold">
           <p>The best way to study.</p>
           <p>Sign Up for free.</p>
@@ -35,7 +35,7 @@ export default function SignUp() {
         <p className="text-gray-50 font-semibold text-4xl">KnowMate.</p>
       </div>
 
-      <div className="basis-[50%] flex items-center justify-center">
+      <div className="basis-[100%] w-full md:basis-[50%] flex items-center justify-center px-8 py-16 md:px-0 md:py-0">
         <div className="max-w-md w-md">
           <div className="flex flex-col items-center gap-y-1 mt-4">
             <p className="">Hi There!</p>
