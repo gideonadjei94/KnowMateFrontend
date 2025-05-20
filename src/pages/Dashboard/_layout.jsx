@@ -22,12 +22,14 @@ export default function Dashboard() {
 
         <div className="flex flex-col">
           {/* HEADER */}
-          <div className="h-20  flex items-center justify-between  px-10 sticky top-0 z-10 backdrop-blur-lg">
-            <div className="flex items-center"></div>
+          <div className="h-20 flex px-10 sticky top-0 z-10 backdrop-blur-lg items-center">
+            <div className="size-10 rounded-full flex items-center justify-center bg-gray-100 ml-auto">
+              <p className="font-medium">AD</p>
+            </div>
           </div>
 
           {/* MAIN OUTLET */}
-          <main className="flex flex-1 flex-col gap-4 px-8 py-5 lg:gap-6 lg:p-6 overflow-auto">
+          <main className="flex flex-1 flex-col gap-4 px-8  overflow-auto">
             <Outlet />
           </main>
         </div>
