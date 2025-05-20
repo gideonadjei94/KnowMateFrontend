@@ -13,7 +13,7 @@ export default function HomeRecentsCard({ recent }) {
   };
 
   return (
-    <div className="p-4 rounded-lg hover:bg-gray-50 flex items-start gap-x-3">
+    <div className="p-4 rounded-lg hover:bg-gray-50 flex items-start gap-x-3 cursor-pointer">
       <div
         className={clsx(
           "size-10 rounded-lg flex items-center justify-center",
