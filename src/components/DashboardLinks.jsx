@@ -17,12 +17,12 @@ const dasboardLinks = [
   },
   {
     name: "Your library",
-    href: "/library",
+    href: "/dashboard/library",
     icon: FolderOpen,
   },
   {
     name: "Notifications",
-    href: "/notifications",
+    href: "/dashboard/notifications",
     icon: Bell,
   },
 ];
@@ -30,19 +30,24 @@ const dasboardLinks = [
 const dasboardLinks2 = [
   {
     name: "Flashcards",
-    href: "/flashcards",
-    icon: GalleryVerticalEnd,
+    href: "/dashboard/flashcards",
+    icon: <GalleryVerticalEnd className="size-5 rotate-90" />,
   },
   {
     name: "Expert Solutions",
-    href: "/solutions",
-    icon: BookMinus,
+    href: "/dashboard/solutions",
+    icon: <BookMinus className="size-5" />,
   },
 ];
 
 const link2Colors = {
   0: "hover:text-cyan-600 hover:bg-cyan-50",
   1: "hover:text-green-600 hover:bg-green-50",
+};
+
+const link2ActiveColors = {
+  "/dashboard/flashcards": "text-cyan-600 bg-cyan-50",
+  "/dashboard/solutions": "text-green-600 bg-green-50",
 };
 
 export function DashboardLinks() {
@@ -73,11 +78,14 @@ export function DashboardLinks() {
             key={index}
             to={link.href}
             className={clsx(
-              "flex items-center gap-3 p-3 text-sm text-gray-400 rounded-lg",
+              location.pathname === link.href
+                ? link2ActiveColors[location.pathname]
+                : "text-gray-400",
+              "flex items-center gap-3 p-3 text-sm rounded-lg",
               link2Colors[index]
             )}
           >
-            <link.icon className="size-5" />
+            {link.icon}
             {link.name}
           </Link>
         ))}

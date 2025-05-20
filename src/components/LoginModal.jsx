@@ -31,9 +31,9 @@ export default function LoginModal({ onClose }) {
           </button>
 
           <div className="flex items-center justify-evenly ">
-            <div className="h-[1px] w-[45%] bg-gray-300" />
+            <div className="h-[0.5px] w-[45%] bg-gray-300" />
             <p className="text-sm text-gray-400">Or</p>
-            <div className="h-[1px] w-[45%] bg-gray-300" />
+            <div className="h-[0.5px] w-[45%] bg-gray-300" />
           </div>
 
           <form className="mt-4">
