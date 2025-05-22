@@ -1,4 +1,4 @@
-import { Lock, Mail, X } from "lucide-react";
+import { Lock, Mail, User2 } from "lucide-react";
 import booksImg from "../assets/books.png";
 import googleLogo from "../assets/google.png";
 import { useState } from "react";
@@ -64,11 +64,11 @@ export default function SignUp() {
                 />
               </div>
               <div className="border border-gray-300 rounded-xl p-3 flex items-center gap-x-4 mt-5">
-                <Lock className="size-5 text-indigo-600" />
+                <User2 className="size-5 text-indigo-600" />
                 <input
-                  type="password"
+                  type="text"
                   className="w-full outline-none text-sm"
-                  placeholder="Enter a Password"
+                  placeholder="Enter a Username"
                 />
               </div>
               <div className="border border-gray-300 rounded-xl p-3 flex items-center gap-x-4 mt-5">
@@ -76,7 +76,7 @@ export default function SignUp() {
                 <input
                   type="password"
                   className="w-full outline-none text-sm"
-                  placeholder="Confirm your Password"
+                  placeholder="Enter a Password"
                 />
               </div>
               <div className="flex items-center gap-x-3 mt-3">

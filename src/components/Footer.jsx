@@ -1,3 +1,5 @@
+import { Instagram, Linkedin, Twitter } from "lucide-react";
+
 export default function Footer() {
   return (
     <div className="py-12 px-[10%] mt-[10%] bg-gray-100">
@@ -45,23 +47,23 @@ export default function Footer() {
         <div className="flex flex-col gap-4">
           <h3 className="text-xl font-semibold">Contact & Social</h3>
           <p className=" ">Email: support@knowmate.app</p>
-          <p className=" ">Phone: +233 XXX XXX XXX</p>
+          <p className=" ">Phone: +233 20 544 615</p>
           <div>
             <p className=" mb-2">Follow Us</p>
             <ul className="flex gap-4 ">
               <li>
                 <a href="#" className="hover:cursor-pointer">
-                  Twitter
+                  <Twitter className="size-5 hover:text-red-500" />
                 </a>
               </li>
               <li>
                 <a href="#" className="hover:cursor-pointer">
-                  LinkedIn
+                  <Linkedin className="size-5 hover:text-red-500" />
                 </a>
               </li>
               <li>
                 <a href="#" className="hover:cursor-pointer">
-                  Instagram
+                  <Instagram className="size-5 hover:text-red-500" />
                 </a>
               </li>
             </ul>

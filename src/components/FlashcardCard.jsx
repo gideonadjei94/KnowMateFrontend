@@ -1,6 +1,9 @@
-import React from "react";
+import clsx from "clsx";
+import { getAvatarDetails } from "../utils/AvatarDetails";
 
 export default function () {
+  const { initial, bgColor } = getAvatarDetails("solidNegga23");
+
   return (
     <div className="rounded-lg border border-gray-300 p-4 flex flex-col hover:shadow-md cursor-pointer">
       <div>
@@ -12,8 +15,13 @@ export default function () {
       </div>
 
       <div className="flex items-center gap-x-3 mt-10">
-        <div className="size-8 rounded-full bg-indigo-500 flex items-center justify-center text-white text-xs">
-          AS
+        <div
+          className={clsx(
+            "size-8 rounded-full flex items-center justify-center text-white text-xs",
+            bgColor
+          )}
+        >
+          {initial}
         </div>
 
         <p className="text-sm font-medium text-gray-700">MeekMill</p>
