@@ -71,15 +71,6 @@ export default function HomeOutlet() {
       </div>
 
       <div className="mt-16 mx-2">
-        <p className="text-slate-600 font-medium ">Popular textbooks</p>
-        <div className="mt-4 grid grid-cols-1 md:grid-cols-3 gap-4 ">
-          <FlashcardCard />
-          <FlashcardCard />
-          <FlashcardCard />
-        </div>
-      </div>
-
-      <div className="mt-16 mx-2">
         <p className="text-slate-600 font-medium ">Popular questions</p>
         <div className="mt-4 grid grid-cols-1 md:grid-cols-3 gap-4 ">
           {popularQuestions.map((q, index) => (

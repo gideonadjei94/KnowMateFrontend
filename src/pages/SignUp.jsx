@@ -83,8 +83,13 @@ export default function SignUp() {
                 <input type="checkbox" />
                 <p className="text-xs font-medium">
                   I accept KnowMate's{" "}
-                  <span className="text-gray-500">Terms of Service</span> and{" "}
-                  <span className="text-gray-500">Privacy Policy</span>
+                  <span className="text-gray-500 cursor-pointer">
+                    Terms of Service
+                  </span>{" "}
+                  and{" "}
+                  <span className="text-gray-500 cursor-pointer">
+                    Privacy Policy
+                  </span>
                 </p>
               </div>
 
