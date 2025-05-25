@@ -3,17 +3,22 @@ import {
   Bell,
   BookMinus,
   FolderOpen,
-  GalleryHorizontalEnd,
   GalleryVerticalEnd,
+  HelpCircle,
   Home,
 } from "lucide-react";
-import { href, Link, useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const dasboardLinks = [
   {
     name: "Home",
     href: "/dashboard",
     icon: Home,
+  },
+  {
+    name: "Quiz",
+    href: "/dashboard/quiz",
+    icon: HelpCircle,
   },
   {
     name: "Your library",

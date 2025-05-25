@@ -6,9 +6,9 @@ import SignUp from "./pages/SignUp";
 import Dashboard from "./pages/Dashboard/_layout";
 import HomeOutlet from "./pages/Dashboard/HomeOutlet";
 import LibraryOutlet from "./pages/Dashboard/LibraryOutlet";
-import NotificationsOutlet from "./pages/Dashboard/NotificationsOutlet";
 import FlashCardsOutlet from "./pages/Dashboard/FlashCardsOutlet";
 import SolutionsOutlet from "./pages/Dashboard/SolutionsOutlet";
+import QuizOutlet from "./pages/Dashboard/QuizOutlet";
 
 function App() {
   const location = useLocation();
@@ -17,7 +17,7 @@ function App() {
     "/signup": "Sign Up | KnowMate",
     "/dashboard": "Dashboard",
     "/dashboard/library": "Your library | KnowMate",
-    "/dashboard/notifications": "Your Notifications | KnowMate",
+    "/dashboard/quiz": "Quiz",
     "/dashboard/flashcards": "Your sets | KnowMate",
     "/dashboard/solutions": "Expert Solutions | KnowMate",
   };
@@ -32,8 +32,8 @@ function App() {
       <Route path="/signup" element={<SignUp />} />
       <Route path="/dashboard" element={<Dashboard />}>
         <Route index element={<HomeOutlet />} />
+        <Route path="quiz" element={<QuizOutlet />} />
         <Route path="library" element={<LibraryOutlet />} />
-        <Route path="notifications" element={<NotificationsOutlet />} />
         <Route path="flashcards" element={<FlashCardsOutlet />} />
         <Route path="solutions" element={<SolutionsOutlet />} />
       </Route>

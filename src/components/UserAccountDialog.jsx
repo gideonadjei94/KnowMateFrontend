@@ -6,7 +6,7 @@ export default function UserAccountDialog({ toggleUserDialog }) {
   const { initial, bgColor } = getAvatarDetails("adams_scanty");
   return (
     <div
-      className="absolute right-10 top-[68px] z-50 bg-white shadow-lg border border-gray-200 rounded-lg w-80 max-h-[420px]  p-5"
+      className="fixed right-10 top-[68px] z-50 bg-white shadow-lg border border-gray-200 rounded-lg w-80 max-h-[420px]  p-5"
       onClick={toggleUserDialog}
     >
       <div className="flex items-center gap-x-3 border-b pb-5 border-gray-200">
