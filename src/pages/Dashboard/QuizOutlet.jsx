@@ -1,6 +1,5 @@
 import { useState } from "react";
 import {
-  BookCopy,
   ChevronDown,
   ChevronRight,
   FlaskConical,
@@ -10,6 +9,7 @@ import {
   PencilRuler,
   PenLine,
 } from "lucide-react";
+import FileUploader from "../../components/FileUploadForm";
 
 const subjects = {
   Literature: ["Novels", "Poems", "Plays"],
@@ -122,6 +122,10 @@ export default function QuizOutlet() {
         <button className="px-3 py-2 rounded-lg text-sm bg-slate-800 text-white cursor-pointer font-medium hover:bg-slate-700">
           Start Quiz
         </button>
+      </div>
+
+      <div className="mt-[10%]">
+        <FileUploader />
       </div>
     </div>
   );
