@@ -40,7 +40,7 @@ export default function Dashboard() {
           <div className="h-20 flex px-10 sticky top-0 z-10 backdrop-blur-lg items-center">
             <div
               className={clsx(
-                "size-10 rounded-full flex items-center justify-center ml-auto text-white cursor-pointer",
+                "size-12 rounded-full flex items-center justify-center ml-auto text-white cursor-pointer",
                 bgColor
               )}
               onClick={() => setShowUserDialog(!showUserDialog)}

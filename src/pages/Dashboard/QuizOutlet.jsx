@@ -10,6 +10,7 @@ import {
   PenLine,
 } from "lucide-react";
 import FileUploader from "../../components/FileUploadForm";
+import clsx from "clsx";
 
 const subjects = {
   Literature: ["Novels", "Poems", "Plays"],
@@ -119,7 +120,15 @@ export default function QuizOutlet() {
           )}
         </div>
 
-        <button className="px-3 py-2 rounded-lg text-sm bg-slate-800 text-white cursor-pointer font-medium hover:bg-slate-700">
+        <button
+          className={clsx(
+            "px-3 py-2 rounded-lg text-sm font-medium ",
+            selectedSubject
+              ? "bg-slate-800 text-white hover:bg-slate-700 cursor-pointer"
+              : "bg-gray-200 text-gray-600 cursor-not-allowed"
+          )}
+          disabled={selectedSubject == null}
+        >
           Start Quiz
         </button>
       </div>
