@@ -1,5 +1,5 @@
 import clsx from "clsx";
-import { getAvatarDetails } from "../utils/AvatarDetails";
+import { getAvatarDetails } from "../../utils/AvatarDetails";
 
 export default function () {
   const { initial, bgColor } = getAvatarDetails("solidNegga23");

@@ -1,6 +1,6 @@
 import clsx from "clsx";
 import { GalleryVerticalEnd } from "lucide-react";
-import { getAvatarDetails } from "../utils/AvatarDetails";
+import { getAvatarDetails } from "../../utils/AvatarDetails";
 
 export default function TopCreatorCard({ creator }) {
   const { initial, bgColor } = getAvatarDetails(creator.username);

@@ -1,10 +1,10 @@
 import { Outlet } from "react-router-dom";
-import { DashboardLinks } from "../../components/DashboardLinks";
+import { DashboardLinks } from "../../components/home/DashboardLinks";
 import { useState } from "react";
 import { getAvatarDetails } from "../../utils/AvatarDetails";
 import clsx from "clsx";
-import NotificationsDialog from "../../components/NotificationsDialog";
-import UserAccountDialog from "../../components/UserAccountDialog";
+import NotificationsDialog from "../../components/notification/NotificationsDialog";
+import UserAccountDialog from "../../components/home/UserAccountDialog";
 
 export default function Dashboard() {
   const [showNotifications, setShowNotifications] = useState(false);

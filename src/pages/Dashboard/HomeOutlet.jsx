@@ -1,7 +1,7 @@
-import FlashcardCard from "../../components/FlashcardCard";
-import HomeRecentsCard from "../../components/HomeRecentsCard";
-import PopularQuestionsCard from "../../components/PopularQuestionsCard";
-import TopCreatorCard from "../../components/TopCreatorCard";
+import FlashcardCard from "../../components/flashcard/FlashcardCard";
+import HomeRecentsCard from "../../components/home/HomeRecentsCard";
+import PopularQuestionsCard from "../../components/quiz/PopularQuestionsCard";
+import TopCreatorCard from "../../components/home/TopCreatorCard";
 
 export default function HomeOutlet() {
   const recentsData = [

@@ -1,11 +1,11 @@
-import { ChevronDown, Menu, Plus } from "lucide-react";
-import FeaturesCarousel from "../components/FeaturesCarousel";
-import Footer from "../components/Footer";
+import { Plus } from "lucide-react";
+import FeaturesCarousel from "../components/landingPage/FeaturesCarousel";
+import Footer from "../components/landingPage/Footer";
 import { useEffect, useState } from "react";
-import LoginModal from "../components/LoginModal";
+import LoginModal from "../components/common/LoginModal";
 import { useNavigate } from "react-router-dom";
-import StudyToolsDropDown from "../components/StudyToolsDropDown";
-import MenuSheet from "../components/MenuSheet";
+import StudyToolsDropDown from "../components/landingPage/StudyToolsDropDown";
+import MenuSheet from "../components/common/MenuSheet";
 
 export default function LandingPage() {
   const navigate = useNavigate();

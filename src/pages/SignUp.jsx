@@ -2,7 +2,7 @@ import { Lock, Mail, User2 } from "lucide-react";
 import booksImg from "../assets/books.png";
 import googleLogo from "../assets/google.png";
 import { useState } from "react";
-import LoginModal from "../components/LoginModal";
+import LoginModal from "../components/common/LoginModal";
 import { useNavigate } from "react-router-dom";
 
 export default function SignUp() {

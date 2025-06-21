@@ -1,5 +1,5 @@
 import clsx from "clsx";
-import { getAvatarDetails } from "../utils/AvatarDetails";
+import { getAvatarDetails } from "../../utils/AvatarDetails";
 import { LogOut, Moon, Settings, Trophy } from "lucide-react";
 
 export default function UserAccountDialog({ toggleUserDialog }) {

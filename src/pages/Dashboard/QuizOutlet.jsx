@@ -9,7 +9,7 @@ import {
   PencilRuler,
   PenLine,
 } from "lucide-react";
-import FileUploader from "../../components/FileUploadForm";
+import FileUploader from "../../components/quiz/FileUploadForm";
 import clsx from "clsx";
 
 const subjects = {
